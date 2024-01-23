@@ -21,7 +21,7 @@ let connection;
 })(); // syntax allows for you to call the anon function immediatly by nesting it inside the async function and also allows for you to use async when it wont work
 
 // sends products from DB
-app.get('/', async function (req, res) {
+app.get('/shop', async function (req, res) {
     //query to return everything from DB (bad practice to use * in larger scale projects)
     const results = await connection.query(`
       SELECT id, product_type, product_name, product_img, product_price, product_description FROM product;`
